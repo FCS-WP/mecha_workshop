@@ -1,0 +1,280 @@
+.btn-col-vertical {
+  display: flex !important;
+  justify-content: center !important;
+  // align-items: center !important;
+}
+
+// ============================================
+// PROJECT CATEGORY BUTTONS (Vertical)
+// ============================================
+.project-category-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+
+  .project-cat-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 25px;
+    background: #ffffff;
+    border: 2px solid $primary-text-color;
+    border-radius: 8px;
+    color: $primary-text-color;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+    .cat-count {
+      margin-left: 8px;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+  }
+
+  // Responsive
+  @media (max-width: 768px) {
+    max-width: 100%;
+
+    .project-cat-btn {
+      padding: 12px 20px;
+      font-size: 14px;
+    }
+  }
+}
+
+// ============================================
+// PROJECT CATEGORY SLIDER (Horizontal Tabs + Slider)
+// ============================================
+.project-category-slider-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 0;
+
+  // Category Tabs - Horizontal
+  .project-cat-tabs-horizontal {
+    display: flex;
+    gap: 0;
+    margin-bottom: 40px;
+    border: 3px solid $primary-text-color;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+    }
+
+    .project-cat-tab {
+      flex: 1;
+      padding: 12px 24px;
+      background: #ffffff;
+      border: none;
+      border-right: 2px solid $primary-text-color;
+      color: $primary-text-color;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      margin-bottom: 0;
+      margin-right: 0;
+
+      @media (max-width: 768px) {
+        flex: 1 1 100%;
+        border-right: none;
+        border-bottom: 2px solid $primary-text-color;
+      }
+
+      &:last-child {
+        border-right: none;
+
+        @media (max-width: 768px) {
+          border-bottom: none;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: $primary-text-color;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+
+        @media (max-width: 768px) {
+          height: 100%;
+          width: 4px;
+          transform: scaleY(0);
+        }
+      }
+
+      &:hover {
+        background: rgba($primary-text-color, 0.05);
+      }
+
+      &.active {
+        background: $primary-text-color;
+        color: #ffffff;
+        font-weight: 600;
+
+        &::after {
+          transform: scaleX(1);
+
+          @media (max-width: 768px) {
+            transform: scaleY(1);
+          }
+        }
+      }
+    }
+  }
+
+  // Project Sliders Container
+  .project-sliders-container {
+    position: relative;
+
+    .project-slider {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+
+      .no-projects {
+        text-align: center;
+        padding: 60px 20px;
+        color: #999;
+        font-size: 18px;
+      }
+    }
+  }
+
+  // Slider Wrapper
+  .slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .slider-arrow {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+
+      img {
+        display: block;
+        width: 40px;
+        height: auto;
+
+        @media (max-width: 768px) {
+          width: 30px;
+        }
+      }
+    }
+  }
+
+  // Slider Track
+  .project-slider-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; // Firefox
+    -ms-overflow-style: none; // IE and Edge
+    flex: 1; // Take full available width
+
+    &::-webkit-scrollbar {
+      display: none; // Chrome, Safari, Opera
+    }
+
+    @media (max-width: 768px) {
+      gap: 15px;
+    }
+  }
+
+  // Project Slide
+  .project-slide {
+    flex: 0 0 calc(33.333% - 14px);
+    min-width: calc(33.333% - 14px); // Ensure 3 items visible
+
+    @media (max-width: 1024px) {
+      flex: 0 0 calc(50% - 10px);
+      min-width: calc(50% - 10px);
+    }
+
+    @media (max-width: 640px) {
+      flex: 0 0 100%;
+      min-width: 100%;
+    }
+
+    .project-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+
+        .project-image img {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    .project-image {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #f0f0f0;
+      margin-bottom: 15px;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      &.placeholder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #fff;
+        font-weight: 600;
+        text-align: center;
+        padding: 20px;
+      }
+    }
+
+    .project-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #333;
+      margin: 0;
+      text-align: center;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
+    }
+  }
+}

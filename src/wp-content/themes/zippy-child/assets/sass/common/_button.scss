@@ -1,0 +1,23 @@
+.btn-primary {
+  border-radius: 40px !important;
+  padding: 5px 40px !important;
+  color: $primary-text-color !important;
+  background-color: $secondary-color !important;
+}
+
+.rating-slider {
+  .flickity-prev-next-button {
+    background: $primary-color !important;
+    color: white !important;
+    border-radius: 50% !important;
+  }
+
+  .flickity-prev-next-button.previous {
+    left: -60px !important;
+  }
+
+  .flickity-prev-next-button.next {
+    left: auto !important;
+    right: -60px !important;
+  }
+}

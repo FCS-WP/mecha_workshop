@@ -1,0 +1,195 @@
+// ============================================
+// FOOTER MENU STYLES
+// ============================================
+
+.ux-menu {
+  &.menu-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include desktop {
+      align-items: flex-end;
+    }
+    @include tablet {
+      align-items: flex-end;
+    }
+    gap: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    // Remove divider border
+    &.ux-menu--divider-solid {
+      .ux-menu-link {
+        border-bottom: 0 !important;
+        border-top: 0 !important;
+
+        &::after,
+        &::before {
+          display: none !important;
+        }
+
+        &:not(:last-of-type) {
+          .ux-menu-link__link {
+            border-bottom-style: none !important;
+            border-bottom: 0 !important;
+          }
+        }
+      }
+    }
+
+    .ux-menu-link {
+      margin: 0;
+      padding: 0;
+      border: 0 !important;
+      width: auto;
+      text-align: right;
+
+      &.menu-item {
+        .ux-menu-link__link {
+          display: inline-flex;
+          align-items: center;
+          justify-content: flex-end;
+          padding: 10px 0;
+          text-decoration: none;
+          color: inherit;
+          transition: all 0.3s ease;
+
+          .ux-menu-link__text {
+            font-size: 14px;
+            font-weight: 400;
+            transition: color 0.3s ease;
+          }
+
+          &:hover {
+            .ux-menu-link__text {
+              color: #e6a8a8;
+            }
+          }
+        }
+
+        // Active state
+        &.ux-menu-link--active {
+          .ux-menu-link__link {
+            .ux-menu-link__text {
+              font-weight: 500;
+              color: #e6a8a8;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Stack utilities
+.stack {
+  display: flex;
+
+  &.stack-col {
+    flex-direction: column;
+  }
+
+  &.justify-start {
+    justify-content: flex-start;
+  }
+}
+
+// ============================================
+// FOOTER MENU VARIATIONS
+// ============================================
+
+// Left aligned footer menu
+.ux-menu.menu-footer-left {
+  align-items: flex-start;
+
+  .ux-menu-link {
+    text-align: left;
+
+    .ux-menu-link__link {
+      justify-content: flex-start;
+    }
+  }
+}
+
+// Centered footer menu
+.ux-menu.menu-footer-center {
+  align-items: center;
+
+  .ux-menu-link {
+    text-align: center;
+
+    .ux-menu-link__link {
+      justify-content: center;
+    }
+  }
+}
+
+// Inline footer menu (horizontal)
+.ux-menu.menu-footer-inline {
+  flex-direction: row;
+  gap: 20px;
+
+  .ux-menu-link {
+    .ux-menu-link__link {
+      padding: 0 15px;
+    }
+  }
+}
+
+// Footer menu with spacing
+.ux-menu.menu-footer-spaced {
+  gap: 10px;
+
+  .ux-menu-link {
+    .ux-menu-link__link {
+      padding: 15px 0;
+    }
+  }
+}
+
+// Footer menu dark theme
+.footer-dark {
+  .ux-menu.menu-footer {
+    .ux-menu-link__text {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .ux-menu-link__link:hover {
+      .ux-menu-link__text {
+        color: #fff;
+      }
+    }
+  }
+}
+
+// Footer menu light theme
+.footer-light {
+  .ux-menu.menu-footer {
+    .ux-menu-link__text {
+      color: #666;
+    }
+
+    .ux-menu-link__link:hover {
+      .ux-menu-link__text {
+        color: #333;
+      }
+    }
+  }
+}
+
+.row-social-links {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 0px !important;
+
+  @include tablet {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  @include desktop {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+}

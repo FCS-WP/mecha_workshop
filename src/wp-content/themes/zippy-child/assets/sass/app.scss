@@ -1,21 +1,521 @@
-// // @import './fonts/fonts';
+@import "./mixins";
+@import "./fonts/fonts";
 
-// body {
-//   // display: none !important;
-//   text-align: center;
-//   padding: 0;
-//   margin: 0;
-//   height: 100vh;
-//   // display: flex;
-//   flex-flow: column;
-//   justify-content: center;
-//   align-items: center;
-// }
-// .entry-summary{
-//   background: url(../icons/mics.png);
-// }
-// // footer {
-// //   position: fixed;
-// //   bottom: 0px;
-// //   color: white;
-// // }
+@import "./common/button";
+@import "./common/header";
+@import "./common/footer";
+@import "./common/form";
+
+@import "./pages/our-portfolio";
+@import "./pages/our-package";
+@import "./pages/shop-page";
+@import "./pages/cart";
+@import "./pages/checkout";
+@import "./pages/home";
+@import "./pages/woocommerce";
+@import "./pages/project-detail";
+
+@import "./component/product_filter_layout";
+@import "./component/addon";
+@import "./component/faq";
+
+// ============================================
+// SPACING UTILITIES
+// ============================================
+.m-0 {
+  margin: 0 !important;
+}
+.mt-0 {
+  margin-top: 0 !important;
+}
+.mr-0 {
+  margin-right: 0 !important;
+}
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+.ml-0 {
+  margin-left: 0 !important;
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+.pt-0 {
+  padding-top: 0 !important;
+}
+.pr-0 {
+  padding-right: 0 !important;
+}
+.pb-0 {
+  padding-bottom: 0 !important;
+}
+.pl-0 {
+  padding-left: 0 !important;
+}
+
+.mt-10 {
+  margin-top: 10px !important;
+}
+.mt-20 {
+  margin-top: 20px !important;
+}
+.mt-30 {
+  margin-top: 30px !important;
+}
+.mt-40 {
+  margin-top: 40px !important;
+}
+.mt-50 {
+  margin-top: 50px !important;
+}
+
+.mb-10 {
+  margin-bottom: 10px !important;
+}
+.mb-20 {
+  margin-bottom: 20px !important;
+}
+.mb-30 {
+  margin-bottom: 30px !important;
+}
+.mb-40 {
+  margin-bottom: 40px !important;
+}
+.mb-50 {
+  margin-bottom: 50px !important;
+}
+
+.pt-10 {
+  padding-top: 10px !important;
+}
+.pt-20 {
+  padding-top: 20px !important;
+}
+.pt-30 {
+  padding-top: 30px !important;
+}
+.pt-40 {
+  padding-top: 40px !important;
+}
+.pt-50 {
+  padding-top: 50px !important;
+}
+
+.pb-10 {
+  padding-bottom: 10px !important;
+}
+.pb-20 {
+  padding-bottom: 20px !important;
+}
+.pb-30 {
+  padding-bottom: 30px !important;
+}
+.pb-40 {
+  padding-bottom: 40px !important;
+}
+.pb-50 {
+  padding-bottom: 50px !important;
+}
+
+// ============================================
+// DISPLAY UTILITIES
+// ============================================
+.d-none {
+  display: none !important;
+}
+.d-block {
+  display: block !important;
+}
+.d-inline {
+  display: inline !important;
+}
+.d-inline-block {
+  display: inline-block !important;
+}
+.d-flex {
+  display: flex !important;
+}
+.d-inline-flex {
+  display: inline-flex !important;
+}
+
+// ============================================
+// FLEXBOX UTILITIES
+// ============================================
+.flex-row {
+  flex-direction: row !important;
+}
+.flex-column {
+  flex-direction: column !important;
+}
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+.flex-nowrap {
+  flex-wrap: nowrap !important;
+}
+
+.justify-start {
+  justify-content: flex-start !important;
+}
+.justify-end {
+  justify-content: flex-end !important;
+}
+.justify-center {
+  justify-content: center !important;
+}
+.justify-between {
+  justify-content: space-between !important;
+}
+.justify-around {
+  justify-content: space-around !important;
+}
+
+.align-start {
+  align-items: flex-start !important;
+}
+.align-end {
+  align-items: flex-end !important;
+}
+.align-center {
+  align-items: center !important;
+}
+.align-stretch {
+  align-items: stretch !important;
+}
+
+.flex-1 {
+  flex: 1 !important;
+}
+.flex-auto {
+  flex: auto !important;
+}
+
+// ============================================
+// TEXT UTILITIES
+// ============================================
+.text-left {
+  text-align: left !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-justify {
+  text-align: justify !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+.text-lowercase {
+  text-transform: lowercase !important;
+}
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+
+.fw-normal {
+  font-weight: normal !important;
+}
+.fw-bold {
+  font-weight: bold !important;
+}
+.fw-light {
+  font-weight: 300 !important;
+}
+.fw-semibold {
+  font-weight: 600 !important;
+}
+
+.text-white {
+  color: #fff !important;
+}
+.text-black {
+  color: #000 !important;
+}
+.text-muted {
+  color: #6c757d !important;
+}
+
+// ============================================
+// WIDTH & HEIGHT UTILITIES
+// ============================================
+.w-25 {
+  width: 25% !important;
+}
+.w-50 {
+  width: 50% !important;
+}
+.w-75 {
+  width: 75% !important;
+}
+.w-100 {
+  width: 100% !important;
+}
+.w-auto {
+  width: auto !important;
+}
+
+.h-25 {
+  height: 25% !important;
+}
+.h-50 {
+  height: 50% !important;
+}
+.h-75 {
+  height: 75% !important;
+}
+.h-100 {
+  height: 100% !important;
+}
+.h-auto {
+  height: auto !important;
+}
+
+.mw-100 {
+  max-width: 100% !important;
+}
+.mh-100 {
+  max-height: 100% !important;
+}
+
+// ============================================
+// POSITION UTILITIES
+// ============================================
+.position-relative {
+  position: relative !important;
+}
+.position-absolute {
+  position: absolute !important;
+}
+.position-fixed {
+  position: fixed !important;
+}
+.position-sticky {
+  position: sticky !important;
+}
+
+// ============================================
+// BORDER UTILITIES
+// ============================================
+.border-0 {
+  border: 0 !important;
+}
+.border-top-0 {
+  border-top: 0 !important;
+}
+.border-right-0 {
+  border-right: 0 !important;
+}
+.border-bottom-0 {
+  border-bottom: 0 !important;
+}
+.border-left-0 {
+  border-left: 0 !important;
+}
+
+.rounded {
+  border-radius: 0.25rem !important;
+}
+.rounded-0 {
+  border-radius: 0 !important;
+}
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+// ============================================
+// OVERFLOW UTILITIES
+// ============================================
+.overflow-hidden {
+  overflow: hidden !important;
+}
+.overflow-auto {
+  overflow: auto !important;
+}
+.overflow-visible {
+  overflow: visible !important;
+}
+
+// ============================================
+// VISIBILITY UTILITIES
+// ============================================
+.visible {
+  visibility: visible !important;
+}
+.invisible {
+  visibility: hidden !important;
+}
+.opacity-0 {
+  opacity: 0 !important;
+}
+.opacity-50 {
+  opacity: 0.5 !important;
+}
+.opacity-100 {
+  opacity: 1 !important;
+}
+
+// ============================================
+// WOOCOMMERCE FLATSOME OVERRIDES
+// ============================================
+// Remove default margins/paddings
+.woocommerce-breadcrumb {
+  margin-bottom: 20px;
+}
+
+// Product grid customization
+.product-small {
+  .box-text {
+    padding: 15px;
+  }
+}
+
+// Button overrides
+.button,
+.woocommerce button.button {
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+// Price styling
+.price {
+  del {
+    opacity: 0.6;
+  }
+}
+
+// Cart modifications
+.cart-item {
+  .product-thumbnail {
+    width: 80px;
+  }
+}
+
+// Checkout overrides
+.woocommerce-checkout {
+  .form-row {
+    margin-bottom: 15px;
+  }
+}
+
+// Custom container
+.custom-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+// Section spacing
+.section-padding {
+  padding: 60px 0;
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
+}
+
+// ============================================
+// RESPONSIVE UTILITIES
+// ============================================
+@media (max-width: 768px) {
+  .mobile-hidden {
+    display: none !important;
+  }
+  .mobile-text-center {
+    text-align: center !important;
+  }
+  .mobile-mb-20 {
+    margin-bottom: 20px !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .desktop-hidden {
+    display: none !important;
+  }
+}
+
+// ============================================
+// CUSTOM COMPONENTS
+// ============================================
+// Image hover effect
+.image-hover-zoom {
+  overflow: hidden;
+
+  img {
+    transition: transform 0.5s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+// Card component
+.custom-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Badge
+.custom-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 12px;
+  background: #f8f9fa;
+
+  &.badge-primary {
+    background: #007bff;
+    color: #fff;
+  }
+  &.badge-success {
+    background: #28a745;
+    color: #fff;
+  }
+  &.badge-danger {
+    background: #dc3545;
+    color: #fff;
+  }
+  &.badge-warning {
+    background: #ffc107;
+    color: #000;
+  }
+}
+
+//Font weights
+.fw-500 {
+  font-weight: 500 !important;
+}
+
+//Padding
+.p-4 {
+  padding: 16px !important;
+}
+
+.rating-slider {
+  width: 100% !important;
+}
+
+.absolute-footer {
+  display: none !important;
+}
+
+.ux-search-submit {
+  background: $primary-color !important;
+}
