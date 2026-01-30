@@ -25,3 +25,9 @@ $ = jQuery;
 $(document).ready(function () {
   console.log($(".admin"));
 });
+
+import "./pages/our-portfolio/slider-project-category";
+import "./pages/our-packages/slider-package";
+import "./pages/contact-form";
+import "./pages/addon-packages";
+import "./components/faq-accordion";

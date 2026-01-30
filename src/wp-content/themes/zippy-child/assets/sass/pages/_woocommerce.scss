@@ -1,0 +1,22 @@
+.shop-container {
+  .product-title {
+    color: $primary-text-color !important;
+    font-weight: 600 !important;
+  }
+
+  .single_add_to_cart_button {
+    background-color: $primary-color !important;
+    border-radius: 8px !important;
+  }
+}
+
+// Comment Form Submit Button
+.form-submit {
+  input[type="submit"],
+  .submit {
+    background: $primary-text-color;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+  }
+}

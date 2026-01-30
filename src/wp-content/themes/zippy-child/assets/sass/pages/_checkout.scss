@@ -1,0 +1,55 @@
+// WooCommerce Checkout Button Styling
+.wc-block-checkout__actions_row,
+.wc-block-components-checkout-place-order-button {
+  .wc-block-components-button,
+  button.wc-block-components-checkout-place-order-button {
+    background-color: $primary-text-color !important;
+    border-color: $primary-text-color !important;
+    color: #ffffff !important;
+
+    &:hover {
+      background-color: darken($primary-text-color, 10%) !important;
+      border-color: darken($primary-text-color, 10%) !important;
+      color: #ffffff !important;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    &:focus,
+    &:active {
+      background-color: $primary-text-color !important;
+      border-color: $primary-text-color !important;
+      color: #ffffff !important;
+    }
+  }
+}
+
+// Additional selectors for Place Order button
+.woocommerce-checkout {
+  #place_order,
+  button[name="woocommerce_checkout_place_order"] {
+    background-color: $primary-text-color !important;
+    border-color: $primary-text-color !important;
+    color: #ffffff !important;
+
+    &:hover {
+      background-color: darken($primary-text-color, 10%) !important;
+      border-color: darken($primary-text-color, 10%) !important;
+    }
+  }
+}
+
+// WooCommerce Blocks checkout button
+.wp-block-woocommerce-checkout {
+  .wc-block-components-checkout-place-order-button {
+    background-color: $primary-text-color !important;
+    border-color: $primary-text-color !important;
+    color: #ffffff !important;
+
+    &:hover {
+      background-color: darken($primary-text-color, 10%) !important;
+      border-color: darken($primary-text-color, 10%) !important;
+      color: #ffffff !important;
+    }
+  }
+}

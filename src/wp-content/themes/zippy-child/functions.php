@@ -24,3 +24,14 @@ if (!defined('THEME_URL'))
  */
 
 require_once THEME_DIR_CHILD . '/autoload.php';
+
+/**
+ * Localize script for AJAX
+ */
+function theme_enqueue_ajax_scripts()
+{
+    wp_localize_script('main-js', 'ajax_object', array(
+        'ajax_url' => admin_url('admin-ajax.php')
+    ));
+}
+add_action('wp_enqueue_scripts', 'theme_enqueue_ajax_scripts');

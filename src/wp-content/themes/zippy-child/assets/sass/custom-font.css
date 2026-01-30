@@ -1,0 +1,28 @@
+body {
+  font-family: "Caudex-Regular", serif !important;
+}
+
+.custom-title h1,
+.custom-title h2,
+.custom-title h3,
+.custom-title h4,
+.custom-title h5,
+.custom-title h6 {
+  font-family: "Caudex-Bold", serif !important;
+}
+
+.font-caudex-regular {
+  font-family: "Caudex-Regular", serif !important;
+}
+
+.font-caudex-bold {
+  font-family: "Caudex-Bold", serif !important;
+}
+
+.font-quicksand-variable {
+  font-family: "Quicksand-Variable", sans-serif !important;
+}
+
+.font-emojione {
+  font-family: "EmojiOneColor", sans-serif !important;
+}

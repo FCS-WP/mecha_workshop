@@ -1,0 +1,60 @@
+// WooCommerce Cart & Checkout Button Styling
+.wc-block-cart__submit-container,
+.wp-block-woocommerce-proceed-to-checkout-block,
+.wc-proceed-to-checkout {
+  .wc-block-components-button,
+  .wc-block-cart__submit-button,
+  .checkout-button,
+  a.button {
+    background-color: $primary-text-color !important;
+    border-color: $primary-text-color !important;
+    color: #ffffff !important;
+
+    &:hover {
+      background-color: darken($primary-text-color, 10%) !important;
+      border-color: darken($primary-text-color, 10%) !important;
+      color: #ffffff !important;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    &:focus,
+    &:active {
+      background-color: $primary-text-color !important;
+      border-color: $primary-text-color !important;
+      color: #ffffff !important;
+    }
+  }
+}
+
+// Additional selectors for classic WooCommerce
+.woocommerce {
+  .cart {
+    .wc-proceed-to-checkout {
+      a.checkout-button {
+        background-color: $primary-text-color !important;
+        border-color: $primary-text-color !important;
+        color: #ffffff !important;
+
+        &:hover {
+          background-color: darken($primary-text-color, 10%) !important;
+          border-color: darken($primary-text-color, 10%) !important;
+        }
+      }
+    }
+  }
+}
+
+// Cart page update cart button
+.woocommerce-cart {
+  button[name="update_cart"] {
+    background-color: $primary-text-color !important;
+    border-color: $primary-text-color !important;
+    color: #ffffff !important;
+
+    &:hover {
+      background-color: darken($primary-text-color, 10%) !important;
+      border-color: darken($primary-text-color, 10%) !important;
+    }
+  }
+}
