@@ -83,7 +83,7 @@ function project_category_slider_shortcode($atts)
                     <?php if ($projects->have_posts()) : ?>
                         <div class="slider-wrapper">
                             <button class="slider-arrow slider-prev" aria-label="Previous">
-                                <img src="http://localhost:981/wp-content/uploads/2026/01/wfNDdPcircle1.png" alt="Previous" style="transform: scaleX(-1);" />
+                                <img src="<?php echo esc_url(home_url('/wp-content/uploads/2026/01/wfNDdPcircle1.png')); ?>" alt="Previous" style="transform: scaleX(-1);" />
                             </button>
 
                             <div class="project-slider-track">
@@ -106,7 +106,7 @@ function project_category_slider_shortcode($atts)
                             </div>
 
                             <button class="slider-arrow slider-next" aria-label="Next">
-                                <img src="http://localhost:981/wp-content/uploads/2026/01/wfNDdPcircle1.png" alt="Next" />
+                                <img src="<?php echo esc_url(home_url('/wp-content/uploads/2026/01/wfNDdPcircle1.png')); ?>" alt="Next" />
                             </button>
                         </div>
                     <?php else : ?>
@@ -163,7 +163,7 @@ function package_slider_shortcode($atts)
     <div class="package-slider-wrapper">
         <div class="slider-wrapper">
             <button class="slider-arrow slider-prev" aria-label="Previous">
-                <img src="http://localhost:981/wp-content/uploads/2026/01/wfNDdPcircle1.png" alt="Previous" style="transform: scaleX(-1);" />
+                <img src="<?php echo esc_url(home_url('/wp-content/uploads/2026/01/wfNDdPcircle1.png')); ?>" alt="Previous" style="transform: scaleX(-1);" />
             </button>
 
             <div class="package-slider-track">
@@ -201,7 +201,7 @@ function package_slider_shortcode($atts)
             </div>
 
             <button class="slider-arrow slider-next" aria-label="Next">
-                <img src="http://localhost:981/wp-content/uploads/2026/01/wfNDdPcircle1.png" alt="Next" />
+                <img src="<?php echo esc_url(home_url('/wp-content/uploads/2026/01/wfNDdPcircle1.png')); ?>" alt="Next" />
             </button>
         </div>
     </div>
