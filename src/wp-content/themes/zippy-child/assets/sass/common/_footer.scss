@@ -56,14 +56,16 @@
           transition: all 0.3s ease;
 
           .ux-menu-link__text {
+            font-family: "Quicksand-Variable", sans-serif !important;
             font-size: 14px;
-            font-weight: 400;
+            font-weight: bold;
             transition: color 0.3s ease;
+            color: #000;
           }
 
           &:hover {
             .ux-menu-link__text {
-              color: #e6a8a8;
+              color: $primary-text-color;
             }
           }
         }
@@ -72,8 +74,7 @@
         &.ux-menu-link--active {
           .ux-menu-link__link {
             .ux-menu-link__text {
-              font-weight: 500;
-              color: #e6a8a8;
+              color: $primary-text-color;
             }
           }
         }
@@ -191,5 +192,16 @@
   @include desktop {
     flex-direction: column !important;
     gap: 10px !important;
+  }
+}
+
+.logo-footer {
+  margin: 0 auto !important;
+  display: block !important;
+  width: 70% !important;
+
+  img {
+    display: block;
+    margin: 0 auto;
   }
 }

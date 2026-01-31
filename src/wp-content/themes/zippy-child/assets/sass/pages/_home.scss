@@ -7,3 +7,18 @@
     text-align: center;
   }
 }
+
+// Testimonial text styling
+.testimonial-text {
+  font-style: normal !important;
+  font-weight: 600 !important;
+
+  &.italic,
+  &.is-italic {
+    font-style: normal !important;
+  }
+}
+
+.star-rating span:before {
+  color: black !important;
+}
