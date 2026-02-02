@@ -8,6 +8,7 @@
   padding: 0px 20px;
   max-width: 1400px;
   margin: 0 auto;
+  max-width: 1140px;
 
   @include desktop {
     flex-direction: row;
@@ -16,7 +17,7 @@
   }
 
   .addon-section-title {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: $primary-text-color;
     margin-bottom: 25px;
@@ -25,12 +26,10 @@
 
     @include tablet {
       font-size: 1.6rem;
-      margin-bottom: 30px;
     }
 
     @include desktop {
       font-size: 1.6rem;
-      margin-bottom: 40px;
     }
   }
 }
@@ -117,7 +116,7 @@
           margin: 0 0 5px 0;
 
           @include tablet {
-            font-size: 1.6rem;
+            font-size: 1.25rem;
           }
         }
 
@@ -127,7 +126,7 @@
           color: $primary-text-color;
 
           @include tablet {
-            font-size: 1.6rem;
+            font-size: 1.25rem;
           }
         }
       }
@@ -182,7 +181,7 @@
         color: #333;
 
         @include tablet {
-          font-size: 1.6rem;
+          font-size: 1.25rem;
         }
       }
 
@@ -207,7 +206,7 @@
           color: $primary-text-color;
 
           @include tablet {
-            font-size: 1.6rem;
+            font-size: 1.25rem;
           }
         }
       }
