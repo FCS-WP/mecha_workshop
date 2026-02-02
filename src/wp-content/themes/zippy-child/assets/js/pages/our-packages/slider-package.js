@@ -49,7 +49,7 @@ jQuery(document).ready(function ($) {
       var targetOffset = $targetSlide.offset().left;
       var newScroll = currentScroll + (targetOffset - trackOffset);
       newScroll = Math.max(0, Math.min(maxScroll, newScroll));
-      $track.animate({ scrollLeft: newScroll }, 500, "swing");
+      $track.animate({ scrollLeft: newScroll }, 0, "swing");
     }
   });
 });
