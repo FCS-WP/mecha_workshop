@@ -3,6 +3,10 @@
 // ============================================
 .container-faq-packages {
   padding: 40px 20px !important;
+
+  @include tablet {
+    padding: 120px 40px !important;
+  }
 }
 
 .faq-accordion-wrapper {
@@ -14,7 +18,7 @@
   }
 
   .faq-title {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: $primary-text-color;
     text-align: center;
@@ -24,7 +28,7 @@
 
     @include tablet {
       font-size: 1.6rem;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
   }
 }
@@ -77,18 +81,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 18px 20px;
+    margin-bottom: 0px !important;
+    padding: 12px 20px;
     background: #ffffff;
     border: none;
     cursor: pointer;
     text-align: left;
     transition: all 0.3s ease;
     gap: 15px;
-
-    @include tablet {
-      padding: 22px 30px;
-      gap: 20px;
-    }
 
     &:hover {
       background: rgba($primary-text-color, 0.03);
@@ -100,10 +100,6 @@
       font-weight: 600;
       color: #333;
       line-height: 1.4;
-
-      @include tablet {
-        font-size: 1.15rem;
-      }
     }
 
     .faq-icon {
@@ -213,7 +209,7 @@
 @media (max-width: 479px) {
   .faq-accordion-wrapper {
     .faq-title {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
   }
 
