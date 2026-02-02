@@ -7,10 +7,11 @@
 
 .rating-slider {
   .flickity-prev-next-button {
-    background: $primary-color !important;
+    background: #b7a0cc !important;
     color: white !important;
     border-radius: 50% !important;
     width: 48px !important;
+    opacity: 1 !important;
   }
 
   .flickity-prev-next-button.previous {
@@ -21,4 +22,9 @@
     left: auto !important;
     right: -60px !important;
   }
+}
+
+.slider .flickity-prev-next-button:hover .arrow,
+.slider .flickity-prev-next-button:hover svg {
+  fill: rgba(255, 255, 255, 0.9) !important;
 }
