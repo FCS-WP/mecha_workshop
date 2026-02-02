@@ -5,6 +5,13 @@
   background-color: $secondary-color !important;
 }
 
+.btn-custom {
+  border-radius: 40px !important;
+  padding: 5px 40px !important;
+  color: $primary-text-color !important;
+  background-color: #fff !important;
+}
+
 .rating-slider {
   .flickity-prev-next-button {
     background: #b7a0cc !important;
