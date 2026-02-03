@@ -58,3 +58,15 @@
   border-radius: 10px;
   height: 100%;
 }
+
+.container-contact-us-info {
+  padding: 30px !important;
+
+  @include tablet {
+    padding: 0 !important;
+  }
+
+  @include desktop {
+    padding: 0 !important;
+  }
+}
